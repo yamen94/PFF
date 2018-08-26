@@ -1,3 +1,123 @@
 <resources>
     <string name="app_name">PFF</string>
+    <string name="secondLetter">F</string>
+    <string name="firstLetter">P</string>
+    <string name="wordOne">ro</string>
+    <string name="wordTwo">riendly</string>
+    <string name="wordThree">ootball</string>
+    <string name="firstpagelogo">firstPageLogo</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_on_boarding">onBoarding</string>
+
+    <string name="playerSlider">PPFer </string>
+    <string name="teamSlider">Teams </string>
+    <string name="refreeSlider">Referee </string>
+    <string name="rankSlider">Leaderboard</string>
+    <string name="tournamentsSlider">Tournaments </string>
+    <string name="letStartSlider">Ready ? </string>
+
+
+    <string name="playerSliderDesc">Create your profile and become a Pro Friendly Footballer.  </string>
+    <string name="teamSliderDesc">Join or create a team with your friends. </string>
+    <string name="refreeSliderDesc">You can be a referee in matches between other teams.  </string>
+    <string name="rankSliderDesc">Win more matches to increase your rank and your team\'s rank. </string>
+    <string name="tournamentsSliderDesc">Join or create tournaments to gain more experience.  </string>
+    <string name="letStartSliderDesc">Don\'t wait no more, lets start and join PFF world.</string>
+    <string name="next">NEXT</string>
+    <string name="start">START</string>
+
+    <string name="roundedLogo">the logo in round shape</string>
+    <string name="email_address">Email Address</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="log_into_your_account">Log into your account</string>
+    <string name="login_now">Login Now</string>
+    <string name="join_today">Join Today!</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="not_a_member">Not A Member?</string>
+    <string name="terms_of_services">Terms of Services</string>
+    <string name="by_logging_i_accept_the">By logging, I accept the</string>
+    <string name="and"> and </string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="remember_me">Remember me</string>
+    <string name="title_activity_registeration">Join PFF World Now!</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="email">Email</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="football_info">Football Info</string>
+    <string name="personal_info">Personal Info</string>
+    <string name="login_info">Login Info</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="verify_email">Verify Email</string>
+    <string name="this_email_is_already_used">This email is already used!</string>
+    <string name="valid_password">Valid Password!</string>
+    <string name="verify_password">Verify Password</string>
+    <string name="enter_valid_email">Enter Valid Email</string>
+    <string name="valid_email">Valid Email!</string>
+    <string name="there_is_error">There was an error please try again</string>
+    <string name="email_already_used">Email already used!</string>
+    <string name="password_less_8_characters">Password length less than 8 characters</string>
+    <string name="password_doesnt_match">Passwords doesn\'t match</string>
+    <string name="this_username_already_exist">This Username already exist!</string>
+    <string name="verify_username">Verify Username</string>
+    <string name="birthdate">Birthdate</string>
+    <string name="location">Location</string>
+    <string name="country">Country:</string>
+    <string name="select_country">select country</string>
+    <string name="year">Year</string>
+    <string name="month">Month</string>
+    <string name="day">Day</string>
+    <string name="city_state">City / State:</string>
+    <string name="minimum_length">minimum length 3 characters</string>
+    <string name="valid_username">Valid Username!</string>
+    <string name="username_already_exist">Username already exist</string>
+    <string name="favourite_club">Favourite Club</string>
+    <string name="height">Height</string>
+    <string name="hieght_hint">(In cm) Example: 185</string>
+    <string name="preferred_foot">Preferred Foot: </string>
+    <string name="player_style">Player Style:</string>
+    <string name="position_on_the_field">Position On The Field</string>
+    <string name="player_position">Player Position: </string>
+    <string name="register">Register</string>
+    <string name="select_style_first">Select Style First</string>
+    <string name="right">Right</string>
+    <string name="left">Left</string>
+    <string name="goalKeeper">GoalKeeper</string>
+    <string name="Defender">Defender</string>
+    <string name="Midfielder">Midfielder</string>
+    <string name="Forward">Forward</string>
+    <string name="CB">Centre Back (CB)</string>
+    <string name="LB">Left Back (LB)</string>
+    <string name="RB">Right Back (RB)</string>
+    <string name="LWB">Left Wing Back (LWB)</string>
+    <string name="RWB">Right Wing Back (RWB)</string>
+    <string name="SW">Sweeper (SW)</string>
+    <string name="DM">Defensive Midfielder (DM)</string>
+    <string name="RW">Right Winger (RW)</string>
+    <string name="LW">Left Winger (LW)</string>
+    <string name="RM">Right Midfielder (RM)</string>
+    <string name="CM">Centre Midfielder (CM)</string>
+    <string name="CAM">Centre Attacking Midfielder (CAM)</string>
+    <string name="ST">Striker (ST)</string>
+    <string name="LF">Left Forward (LF)</string>
+    <string name="RF">Right Forward (RF)</string>
+    <string name="CF">Centre Forward (CF)</string>
+    <string name="example_Arsenal">ex Arsenal</string>
+    <string name="gender">Gender:</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawer</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
 </resources>

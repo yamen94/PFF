@@ -20,11 +20,7 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".activites.activity.OnBoarding" />
-        <activity android:name=".activites.activity.loginActivity"></activity>
-        <activity
-            android:name=".activites.activity.RegisterationActivity"
-            android:label="@string/title_activity_registeration"
-            android:theme="@style/RegistrationTheme">
+        <activity android:name=".activites.activity.loginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,9 +28,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activites.Model.MainActivity"
-            android:label="@string/title_activity_main"
-            android:theme="@style/fullScreen"></activity>
+            android:name=".activites.activity.RegisterationActivity"
+            android:theme="@style/RegistrationTheme" />
     </application>
 
 </manifest>

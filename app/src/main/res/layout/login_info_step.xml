@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/stepperLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ms_white"
+    >
+
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayoutCompat"
+        android:layout_marginStart="5dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/linearLayoutCompat"
+            android:layout_marginTop="48dp"
+            >
+        <EditText
+        android:id="@+id/emailText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="18dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email_address"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:id="@+id/emailLinearLayout"
+            >
+
+            <TextView
+                android:id="@+id/verificationMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/this_email_is_already_used"
+                android:textColor="@color/ms_errorColor"
+                android:textSize="20dp"
+                android:visibility="invisible"/>
+            <Button
+                android:id="@+id/verifyEmailButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/verify_email"
+                android:layout_weight="2"
+                android:background="@color/ms_black"
+                android:textColor="@color/ms_white"
+                android:layout_marginRight="10dp"
+                />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/emailLinearLayout"
+            android:layout_marginTop="35dp"
+            android:ems="10">
+            <EditText
+            android:id="@+id/passwordText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:hint="@string/password"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/passwordText"
+            android:layout_below="@+id/passwordText"
+            android:layout_marginTop="25dp"
+            android:ems="10">
+            <EditText
+            android:id="@+id/confirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:hint="@string/confirm_password"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:id="@+id/passwordLinearLayout"
+        >
+
+        <TextView
+            android:id="@+id/validationMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="@string/valid_password"
+            android:textColor="@color/ms_errorColor"
+            android:textSize="20dp"
+            android:visibility="invisible"/>
+        <Button
+            android:id="@+id/verifyPasswordButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/verify_password"
+            android:layout_weight="1"
+            android:background="@color/ms_black"
+            android:textColor="@color/ms_white"
+            android:layout_marginRight="10dp"/>
+
+       </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+</RelativeLayout>

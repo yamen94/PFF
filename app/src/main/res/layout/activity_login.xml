@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gebril.yamen.pff.activites.activity.loginActivity">
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/roundedLogo"
+        android:src="@drawable/rounded_logo" />
+
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/welcome_back"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/loginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/log_into_your_account"
+        android:textColor="@color/colorPrimary"
+        android:textSize="17sp" />
+
+     <android.support.design.widget.TextInputLayout
+         android:layout_width="300dp"
+         android:layout_height="wrap_content"
+         android:layout_alignParentStart="true"
+         android:layout_below="@id/loginText"
+         android:layout_marginStart="36dp"
+         android:layout_marginTop="50dp"
+         android:ems="10"
+         android:id="@+id/emailLayout">
+         <EditText
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:id="@+id/emailText"
+             android:hint="@string/email_address"
+             android:inputType="textEmailAddress"/>
+
+     </android.support.design.widget.TextInputLayout>>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="300dp"
+        android:id="@+id/passwordLayout"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/emailLayout"
+        android:layout_below="@+id/emailLayout"
+        android:layout_marginTop="25dp"
+        android:ems="10">
+
+        <EditText
+            android:id="@+id/passwordText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+         />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/forgetPasswordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/logoImage"
+        android:layout_below="@+id/passwordLayout"
+        android:layout_marginTop="19dp"
+        android:text="@string/forgot_your_password"
+        android:textAllCaps="false"
+        android:textColor="@color/startPageBackGroundColor"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/registerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/notAMemeberTextView"
+        android:layout_alignBottom="@+id/notAMemeberTextView"
+        android:layout_marginStart="7dp"
+        android:layout_toEndOf="@+id/notAMemeberTextView"
+        android:text="@string/join_today"
+        android:textColor="?android:attr/colorActivatedHighlight"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/notAMemeberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/loginButton"
+        android:layout_below="@+id/forgetPasswordTextView"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/not_a_member"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/login_now"
+        android:textColor="@color/windowBackground"
+        android:textSize="18sp"
+        android:onClick="login"/>
+
+    <CheckBox
+        android:id="@+id/rememberMeCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/loginButton"
+        android:layout_below="@+id/loginButton"
+        android:layout_marginTop="8dp"
+        android:text="@string/remember_me"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/byLoggingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/termsOfServicesTextView"
+        android:layout_alignEnd="@+id/logoImage"
+        android:text="@string/by_logging_i_accept_the"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@id/termsOfServicesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/notAMemeberTextView"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="22dp"
+        android:text="@string/terms_of_services"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/andTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/privayPolicyTextView"
+        android:layout_alignBottom="@+id/privayPolicyTextView"
+        android:layout_toEndOf="@+id/termsOfServicesTextView"
+        android:text="@string/and"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"/>
+
+    <TextView
+        android:id="@+id/privayPolicyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/byLoggingTextView"
+        android:layout_toEndOf="@+id/andTextView"
+        android:text="@string/privacy_policy"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+
+
+</RelativeLayout>
