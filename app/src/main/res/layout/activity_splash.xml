@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/startPageBackGroundColor"
-    tools:context="com.gebril.yamen.pff.activites.activity.splash">
+    tools:context="com.gebril.yamen.pff.activities.activity.splash">
+
 
     <ImageView
         android:id="@+id/imageView2"

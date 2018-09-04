@@ -12,24 +12,26 @@
         android:supportsRtl="true"
         android:theme="@style/fullScreen">
         <activity
-            android:name=".activites.activity.splash"
-            android:screenOrientation="portrait" />
+            android:name=".activities.activity.splash"
+            android:screenOrientation="portrait"
+            android:noHistory="true"/>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".activites.activity.OnBoarding" />
-        <activity android:name=".activites.activity.loginActivity">
+        <activity android:name=".activities.activity.OnBoarding" />
+        <activity android:name=".activities.activity.loginActivity" />
+        <activity
+            android:name=".activities.activity.RegisterationActivity"
+            android:theme="@style/RegistrationTheme" />
+        <activity android:name=".activities.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activites.activity.RegisterationActivity"
-            android:theme="@style/RegistrationTheme" />
     </application>
 
 </manifest>
