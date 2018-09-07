@@ -14,10 +14,10 @@ import com.gebril.yamen.pff.R;
  */
 public class LeaderBoardFragment extends Fragment {
 
-    private final  String TAG = "Leaderboard";
+    private final  String FRAGMENT_TAG = "Leaderboard";
 
-    public  String getTAG() {
-        return TAG;
+    public  String getFRAGMENT_TAG() {
+        return FRAGMENT_TAG;
     }
 
     public LeaderBoardFragment() {

@@ -2,12 +2,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.gebril.yamen.pff.activities.fragments.InvitationFragment">
+    android:paddingBottom="@dimen/fragment_vertical_margin"
+    android:paddingStart="@dimen/fragment_left_margin"
+    android:paddingEnd="@dimen/fragment_right_margin"
+    android:paddingTop="@dimen/fragment_vertical_margin"
+    tools:context="com.gebril.yamen.pff.activities.fragments.HomeFragment">
 
-    <TextView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="INVITATIOOOOOOOON"
-        android:textSize="40sp"/>
+        android:layout_height="match_parent" />
 
 </FrameLayout>

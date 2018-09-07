@@ -80,19 +80,19 @@ public class MainActivity extends AppCompatActivity   {
                 switch (item.getItemId())
                 {
                     case R.id.nav_home:
-                        setFragment(homeFragment , homeFragment.getTAG());
+                        setFragment(homeFragment , homeFragment.getFRAGMENT_TAG());
                         return true;
 
                     case R.id.nav_inv:
-                        setFragment(invFragment , invFragment.getTAG());
+                        setFragment(invFragment , invFragment.getFRAGMENT_TAG());
                         return true;
 
                     case R.id.nav_board:
-                        setFragment(boardFragment , boardFragment.getTAG());
+                        setFragment(boardFragment , boardFragment.getFRAGMENT_TAG());
                         return true;
 
                     case R.id.nav_purchase:
-                        setFragment(purchaseFragment , purchaseFragment.getTAG());
+                        setFragment(purchaseFragment , purchaseFragment.getFRAGMENT_TAG());
                         return true;
 
                     default:
@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity   {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction  fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.main_frame , homeFragment , homeFragment.getTAG());
+        fragmentTransaction.add(R.id.main_frame , homeFragment , homeFragment.getFRAGMENT_TAG());
         fragmentTransaction.commit();
     }
 
@@ -209,7 +209,7 @@ public class MainActivity extends AppCompatActivity   {
                 finish();
                 super.onBackPressed();
             } else {
-                setFragment(homeFragment, homeFragment.getTAG());
+                setFragment(homeFragment, homeFragment.getFRAGMENT_TAG());
                 bottomNavigationView.getMenu().getItem(0).setChecked(true);
             }
 

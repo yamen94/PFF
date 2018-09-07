@@ -9,8 +9,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.gebril.yamen.pff.R;
 import com.gebril.yamen.pff.activities.Model.Match;
@@ -23,19 +21,19 @@ import java.util.ArrayList;
  */
 public class HomeFragment extends Fragment {
 
-    private final  String TAG = "Home";
+    private final  String FRAGMENT_TAG = "Home";
+    ArrayList<Match> list_items = new ArrayList<>();
+    RecyclerView MyRecyclerView;
+    int  Images[] = {R.drawable.arsenal,R.drawable.chelsea};
 
-    public  String getTAG() {
-        return TAG;
+
+    public  String getFRAGMENT_TAG() {
+        return FRAGMENT_TAG;
     }
 
     public HomeFragment() {
         // Required empty public constructor
     }
-
-    ArrayList<Match> list_items = new ArrayList<>();
-    RecyclerView MyRecyclerView;
-    int  Images[] = {R.drawable.arsenal,R.drawable.chelsea};
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,7 +46,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        MyRecyclerView = (RecyclerView) view.findViewById(R.id.cardView);
+        MyRecyclerView =  view.findViewById(R.id.cardView);
         MyRecyclerView.setHasFixedSize(true);
         LinearLayoutManager MyLayoutManager = new LinearLayoutManager(getActivity());
         MyLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);

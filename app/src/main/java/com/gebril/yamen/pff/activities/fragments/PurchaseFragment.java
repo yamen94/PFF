@@ -14,10 +14,10 @@ import com.gebril.yamen.pff.R;
  */
 public class PurchaseFragment extends Fragment {
 
-    private final  String TAG = "Purchase";
+    private final  String FRAGMENT_TAG = "Purchase";
 
-    public  String getTAG() {
-        return TAG;
+    public  String getFRAGMENT_TAG() {
+        return FRAGMENT_TAG;
     }
 
     public PurchaseFragment() {
