@@ -24,6 +24,7 @@ public class InvitationFragment extends Fragment {
     RecyclerView recyclerView;
     ArrayList<Invitation> list_items = new ArrayList<>();
     int  Images[] = {R.drawable.arsenal,R.drawable.chelsea};
+    View view;
 
 
     public  String getFRAGMENT_TAG() {
@@ -46,14 +47,15 @@ public class InvitationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_invitation, container, false);
-        recyclerView = view.findViewById(R.id.recycle_view);
-        LinearLayoutManager MyLayoutManager = new LinearLayoutManager(getActivity());
-        if (list_items.size() > 0 & recyclerView != null) {
-            recyclerView.setAdapter(new InvitationRecyclerAdapter(list_items));
-            recyclerView.setLayoutManager(MyLayoutManager);
+        if (view == null) {
+             view = inflater.inflate(R.layout.fragment_invitation, container, false);
+            recyclerView = view.findViewById(R.id.recycle_view);
+            LinearLayoutManager MyLayoutManager = new LinearLayoutManager(getActivity());
+            if (list_items.size() > 0 & recyclerView != null) {
+                recyclerView.setAdapter(new InvitationRecyclerAdapter(list_items));
+                recyclerView.setLayoutManager(MyLayoutManager);
+            }
         }
-
 
         return view;
     }

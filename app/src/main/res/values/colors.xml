@@ -17,5 +17,29 @@
     <color name="alert_red">#ff0000</color>
     <color name="valid_green">#2ec62e</color>
 
+    <color name="unSelectedItem">#FFFFFF</color>
+    <color name="itemBackground">#000000</color>
+    <color name="SelectedItem">#FFF200</color>
+    <color name="recyclerViewColor">#A0A0A0</color>
+
+    <color name="rvLineColoer">#FFFFFF</color>
+
+    <color name="rvItemSelected">#A0A0A0</color>
+    <color name="rvItemUnselected">#E0E0E0</color>
+    <color name="pageColor">#F7F7F7</color>
+
+    <color name="descriptionColor">#4F4545</color>
+    <color name="tabBackcgroundColor">#FFFFFF</color>
+    <color name="tabunSelectedItem">#939292</color>
+    <color name="tabSelectedItem">#262626</color>
+    <color name="tableTitleBackgroud">#4F4545</color>
+    <color name="tabLabelsColor">#FFFFFF</color>
+
+    <color name="rvItemBackgroundColor">#FFFFFF</color>
+    <color name="seperationLineColor">#A09C95</color>
+    <color name="rvNumberColor">#2D2C2A</color>
+    <color name="rvNameColor">#0F0F0F</color>
+    <color name="rvSubNameColor">#606060</color>
+
 
 </resources>

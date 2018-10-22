@@ -25,6 +25,7 @@ public class HomeFragment extends Fragment {
     ArrayList<Match> list_items = new ArrayList<>();
     RecyclerView MyRecyclerView;
     int  Images[] = {R.drawable.arsenal,R.drawable.chelsea};
+    private View view;
 
 
     public  String getFRAGMENT_TAG() {
@@ -40,21 +41,21 @@ public class HomeFragment extends Fragment {
         super.onCreate(savedInstanceState);
         initializeList();
     }
-
+    //Todo: open team page with animation
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
-        MyRecyclerView =  view.findViewById(R.id.cardView);
-        MyRecyclerView.setHasFixedSize(true);
-        LinearLayoutManager MyLayoutManager = new LinearLayoutManager(getActivity());
-        MyLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        if (list_items.size() > 0 & MyRecyclerView != null) {
-            MyRecyclerView.setAdapter(new HomeRecyclerAdapter(list_items));
+        if (view == null) {
+            view = inflater.inflate(R.layout.fragment_home, container, false);
+            MyRecyclerView = view.findViewById(R.id.cardView);
+            MyRecyclerView.setHasFixedSize(true);
+            LinearLayoutManager MyLayoutManager = new LinearLayoutManager(getActivity());
+            MyLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+            if (list_items.size() > 0 & MyRecyclerView != null) {
+                MyRecyclerView.setAdapter(new HomeRecyclerAdapter(list_items));
+            }
+            MyRecyclerView.setLayoutManager(MyLayoutManager);
         }
-        MyRecyclerView.setLayoutManager(MyLayoutManager);
-
         return view;
     }
 

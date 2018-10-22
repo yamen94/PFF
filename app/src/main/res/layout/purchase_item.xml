@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/purchase_item_width"
+    android:layout_height="@dimen/purchase_item_height"
+    android:background="#141414"
+    android:layout_margin="@dimen/purchase_item_margin">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/goal_exp"
+        android:scaleType="centerCrop"
+        android:layout_margin="5dp"
+        android:id="@+id/iv_main" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/text_margin"
+        android:fontFamily="casual"
+        android:gravity="right"
+        android:text="x1.5 Goal Exp "
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:id="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@id/tv_price"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="1 Match"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="sans-serif"
+        android:text="50"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="25dp"
+        android:layout_height="15dp"
+        android:src="@drawable/test_gold"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:textSize="11sp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="30dp"/>
+
+
+
+
+
+
+
+</RelativeLayout>

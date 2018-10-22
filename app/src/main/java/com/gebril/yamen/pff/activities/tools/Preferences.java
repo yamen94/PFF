@@ -13,4 +13,7 @@ public class Preferences {
    public static final int ERROR = -1;
    public static final int IS_VALID = 1;
    public static final String BASE_URL = "http://192.168.8.101/PFF/v1/";
+   public static final int CATEGORY = 1;
+   public static final int COUNTRY = 2;
+   public static final int FILTER = 3;
 }

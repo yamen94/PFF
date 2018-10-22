@@ -35,14 +35,14 @@ public class OnBoarding extends AppCompatActivity implements View.OnClickListene
 
         vPager = (ViewPager) findViewById(R.id.viewPager);
         Dots_Layout = (LinearLayout) findViewById(R.id.dotsLayout);
-     //   mPagerAdapter = new mPagerAdapter(layouts,this);
+        mPagerAdapter = new mPagerAdapter(layouts,this);
         skipButton = (Button) findViewById(R.id.btnSkip);
         nextButton = (Button) findViewById(R.id.btnNext);
 
         skipButton.setOnClickListener(this);
         nextButton.setOnClickListener(this);
 
-    //    vPager.setAdapter(mPagerAdapter);
+       vPager.setAdapter(mPagerAdapter);
 
 
 

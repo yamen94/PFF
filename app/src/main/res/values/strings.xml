@@ -125,6 +125,21 @@
     <string name="nav_purchase">Purchase</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="view">View:</string>
+    <string name="sorted_by">Sorted by:</string>
+    <string name="filter_by">Filter by:</string>
+    <string name="value">Specify:</string>
+    <string name="find">Find</string>
+    <string name="rank">Rank</string>
+    <string name="name">Name</string>
+    <string name="level">Level</string>
+    <string name="total">Total</string>
+    <string name="lb_tab_first_head">Rank</string>
+    <string name="lb_tab_second_head">Player</string>
+    <string name="lb_tab_third_head">Level</string>
+    <string name="purchase_items">Purchase Items:</string>
+    <string name="the_left_arrow">the left arrow</string>
+    <string name="the_right_arrow">the right arrow</string>
 
 
 </resources>
