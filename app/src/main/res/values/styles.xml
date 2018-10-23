@@ -57,6 +57,9 @@
         <item name="textAllCaps">false</item>
         <item name="android:textAllCaps">false</item>
     </style>
-
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#C6C6C6</item>
+        <item name="colorControlActivated">#FFD700</item>
+    </style>
 
 </resources>
