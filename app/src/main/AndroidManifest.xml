@@ -13,16 +13,14 @@
         android:theme="@style/fullScreen">
         <activity
             android:name=".activities.activity.splash"
-            android:screenOrientation="portrait"
-            android:noHistory="true"/>
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".activities.activity.OnBoarding" >
-
-        </activity>
+        <activity android:name=".activities.activity.OnBoarding"></activity>
         <activity android:name=".activities.activity.loginActivity" />
         <activity
             android:name=".activities.activity.RegisterationActivity"
@@ -34,6 +32,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.activity.SearchActivity"></activity>
     </application>
 
 </manifest>

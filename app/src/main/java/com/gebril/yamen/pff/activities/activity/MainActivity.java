@@ -1,6 +1,10 @@
 package com.gebril.yamen.pff.activities.activity;
 
+import android.app.ActivityOptions;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Handler;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.annotation.NonNull;
@@ -13,11 +17,15 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.transition.Explode;
+import android.transition.Slide;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gebril.yamen.pff.R;
@@ -42,10 +50,14 @@ public class MainActivity extends AppCompatActivity   {
     private Toolbar toolbar;
     private FloatingActionMenu fam;
     private FloatingActionButton fab_match, fab_tournament, fab_team;
+    private TextView tv_search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+        }
         setContentView(R.layout.activity_main);
          toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -167,6 +179,7 @@ public class MainActivity extends AppCompatActivity   {
 
 
 
+
     private void initFragment(HomeFragment homeFragment) {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -249,4 +262,10 @@ public class MainActivity extends AppCompatActivity   {
     }
 
 
+    public void goToSearch(View view) {
+
+            Intent intent = new Intent(this, SearchActivity.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.activity_slide_in_right, R.anim.activity_slide_out_left);
+    }
 }
