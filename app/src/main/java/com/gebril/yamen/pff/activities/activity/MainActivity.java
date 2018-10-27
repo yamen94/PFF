@@ -20,11 +20,13 @@ import android.support.v7.widget.Toolbar;
 import android.transition.Explode;
 import android.transition.Slide;
 import android.util.Log;
+import android.util.Pair;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -49,8 +51,9 @@ public class MainActivity extends AppCompatActivity   {
     private boolean doubleBackToExitPressedOnce;
     private Toolbar toolbar;
     private FloatingActionMenu fam;
-    private FloatingActionButton fab_match, fab_tournament, fab_team;
-    private TextView tv_search;
+    private FloatingActionButton fab_tournament;
+    private FloatingActionButton fab_team;
+    private ImageView iv_logo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +68,9 @@ public class MainActivity extends AppCompatActivity   {
         initFragment(homeFragment);
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        setLogoAnimation();
     }
+
 
 
     private void init()
@@ -80,7 +85,7 @@ public class MainActivity extends AppCompatActivity   {
         doubleBackToExitPressedOnce = false;
         fab_team = (FloatingActionButton) findViewById(R.id.fab_team);
         fab_tournament = (FloatingActionButton) findViewById(R.id.fab_tournament);
-        fab_match = (FloatingActionButton) findViewById(R.id.fab_match);
+        FloatingActionButton fab_match = (FloatingActionButton) findViewById(R.id.fab_match);
         fam = (FloatingActionMenu) findViewById(R.id.fab_menu);
 
 
@@ -178,7 +183,34 @@ public class MainActivity extends AppCompatActivity   {
     }
 
 
+    private void setLogoAnimation()
+    {
+        iv_logo = findViewById(R.id.imageLogo);
 
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            iv_logo.setTransitionName("imageTransition");
+
+            iv_logo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Intent SharedIntent = new Intent(MainActivity.this,AboutActivity.class);
+
+                    Pair[] pairs = new Pair[1];
+                    pairs[0] = new Pair<View, String>(iv_logo , "imageTransition");
+                    ActivityOptions options = null;
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+                        options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,
+                                pairs);
+                        startActivity(SharedIntent, options.toBundle());
+                    } else{
+                        startActivity(SharedIntent);
+                    }
+                }
+            });
+        }
+
+    }
 
     private void initFragment(HomeFragment homeFragment) {
 

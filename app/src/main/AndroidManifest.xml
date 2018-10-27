@@ -20,7 +20,7 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".activities.activity.OnBoarding"></activity>
+        <activity android:name=".activities.activity.OnBoarding" />
         <activity android:name=".activities.activity.loginActivity" />
         <activity
             android:name=".activities.activity.RegisterationActivity"
@@ -32,7 +32,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.activity.SearchActivity"></activity>
+        <activity android:name=".activities.activity.SearchActivity" />
+        <activity android:name=".activities.activity.AboutActivity"></activity>
     </application>
 
 </manifest>

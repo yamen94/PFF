@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.gebril.yamen.pff.activities.activity.AboutActivity"
+    android:background="@color/ms_white">
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/rounded_logo"
+        android:layout_marginTop="70dp"
+        android:layout_gravity="center"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/version"
+        android:layout_marginTop="2dp"
+        android:textSize="15sp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="@dimen/text_margin"
+        android:text="@string/about"
+        android:textAllCaps="false"
+        android:textColor="@color/ms_black"
+        android:textStyle="italic"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/rate_our_app"
+        android:textColor="@color/ms_black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        />
+
+</LinearLayout>
