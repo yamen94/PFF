@@ -17,8 +17,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.transition.Explode;
-import android.transition.Slide;
 import android.util.Log;
 import android.util.Pair;
 import android.view.MenuItem;
@@ -27,8 +25,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.gebril.yamen.pff.R;
 import com.gebril.yamen.pff.activities.fragments.HomeFragment;
@@ -37,7 +33,6 @@ import com.gebril.yamen.pff.activities.fragments.LeaderBoardFragment;
 import com.gebril.yamen.pff.activities.fragments.PurchaseFragment;
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
-
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity   {
@@ -62,7 +57,7 @@ public class MainActivity extends AppCompatActivity   {
             getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
         }
         setContentView(R.layout.activity_main);
-         toolbar = (Toolbar) findViewById(R.id.toolbar);
+         toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         init();
         initFragment(homeFragment);
@@ -76,17 +71,16 @@ public class MainActivity extends AppCompatActivity   {
     private void init()
     {
 
-        mainFrame = (FrameLayout) findViewById(R.id.main_frame);
-        bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+        mainFrame =  findViewById(R.id.main_frame);
+        bottomNavigationView =  findViewById(R.id.navigation);
         homeFragment = new HomeFragment();
         invFragment = new InvitationFragment();
         boardFragment = new LeaderBoardFragment();
         purchaseFragment = new PurchaseFragment();
         doubleBackToExitPressedOnce = false;
-        fab_team = (FloatingActionButton) findViewById(R.id.fab_team);
-        fab_tournament = (FloatingActionButton) findViewById(R.id.fab_tournament);
-        FloatingActionButton fab_match = (FloatingActionButton) findViewById(R.id.fab_match);
-        fam = (FloatingActionMenu) findViewById(R.id.fab_menu);
+        fab_team =  findViewById(R.id.fab_team);
+        fab_tournament =  findViewById(R.id.fab_tournament);
+        fam =  findViewById(R.id.fab_menu);
 
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -120,17 +114,17 @@ public class MainActivity extends AppCompatActivity   {
         });
         Log.i("check", "inside");
 
-       fam.setOnMenuToggleListener(new FloatingActionMenu.OnMenuToggleListener() {
+      /* fam.setOnMenuToggleListener(new FloatingActionMenu.OnMenuToggleListener() {
             @Override
             public void onMenuToggle(boolean opened) {
                 if (opened) {
+                    //do something
                 } else {
                 }
             }
-        });
+        }); */
 
         fab_tournament.setOnClickListener(onButtonClick());
-        fab_match.setOnClickListener(onButtonClick());
         fab_team.setOnClickListener(onButtonClick());
         fam.setClosedOnTouchOutside(true);
 
@@ -144,13 +138,13 @@ public class MainActivity extends AppCompatActivity   {
         });*/
 
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer =  findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView =  findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -174,7 +168,7 @@ public class MainActivity extends AppCompatActivity   {
 
                 }
 
-                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                DrawerLayout drawer =  findViewById(R.id.drawer_layout);
                 drawer.closeDrawer(GravityCompat.START);
                 return true;
             }
@@ -196,12 +190,12 @@ public class MainActivity extends AppCompatActivity   {
 
                     Intent SharedIntent = new Intent(MainActivity.this,AboutActivity.class);
 
-                    Pair[] pairs = new Pair[1];
-                    pairs[0] = new Pair<View, String>(iv_logo , "imageTransition");
-                    ActivityOptions options = null;
+//                    Pair[] pairs = new Pair[1];
+  //                  pairs[0] = new Pair<View, String>(iv_logo , "imageTransition");
+                    ActivityOptions options;
                     if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
                         options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,
-                                pairs);
+                                new Pair<View, String>(iv_logo , "imageTransition"));
                         startActivity(SharedIntent, options.toBundle());
                     } else{
                         startActivity(SharedIntent);
@@ -249,7 +243,7 @@ public class MainActivity extends AppCompatActivity   {
 
         String currentMenuItem = bottomNavigationView.getMenu().findItem(bottomNavigationView.getSelectedItemId()).getTitle().toString();
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer =  findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -281,17 +275,16 @@ public class MainActivity extends AppCompatActivity   {
             @Override
             public void onClick(View view) {
                 if (view == fab_team) {
+                    //go to create team page
                 } else if (view == fab_tournament) {
-                } else {
+                    //go to create tournament page
                 }
                 fam.close(true);
             }
         };
     }
 
-    private void showToast(String msg) {
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-    }
+
 
 
     public void goToSearch(View view) {

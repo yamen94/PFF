@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:fab="http://schemas.android.com/apk/res-auto"
@@ -122,17 +123,6 @@
             fab:fab_colorPressed="#000000"
             fab:fab_colorRipple="#000000"
             fab:fab_label="Create tournament"
-            fab:fab_size="mini" />
-
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/fab_match"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_match"
-            fab:fab_colorNormal="#000000"
-            fab:fab_colorPressed="#000000"
-            fab:fab_colorRipple="#000000"
-            fab:fab_label="Create match"
             fab:fab_size="mini" />
 
     </com.github.clans.fab.FloatingActionMenu>

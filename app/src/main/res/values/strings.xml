@@ -147,6 +147,16 @@
     <string name="about">\"Pro Friendly Football - PFF - is an application created for connecting amateur football lovers together and make them live the dream of being professional players. Each user has his own profile and we record each match he plays, each team he joins and his own statistics like professional player. We have the rating section which makes it more competitive and gives the players more passion to improve their football skills. It contains a lot of other features that makes PFF a mix between physical and digital football games. It was created in 2019 by  <b><i>Yamen Gebril</i></b> who tried to combine his passion and love to football with his developing skills.\"</string>
     <string name="version">Version 1.0.0</string>
     <string name="rate_our_app">How would you rate our app ?</string>
+    <string name="match_location">Match Location:</string>
+    <string name="match_date">Match Date</string>
+    <string name="match_time">Match Time</string>
+    <string name="notes">Notes</string>
+    <string name="create">CREATE</string>
+    <string name="pitch_size">Pitch Size:</string>
+    <string name="full_description_for_the_pitch_location">Full description for the pitch location</string>
+    <string name="search_hint">Search teams</string>
+    <string name="match_creation">Match Creation</string>
+
 
 
 </resources>

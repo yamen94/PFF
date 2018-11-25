@@ -233,4 +233,18 @@ public class PopulateLists {
 
         return temp;
     }
+
+    public static ArrayList<String> pitchSizes() {
+
+        ArrayList<String> temp = new ArrayList<>();
+        temp.add("5 x 5");
+        temp.add("6 x 6");
+        temp.add("7 x 7");
+        temp.add("8 x 8");
+        temp.add("9 x 9");
+        temp.add("10 x 10");
+        temp.add("11 x 11");
+
+        return temp;
+    }
 }
